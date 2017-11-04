@@ -7,6 +7,9 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('posts', function() {
+    this.route('post', { path: ':post_slug' });
+  });
 });
 
 export default Router;
