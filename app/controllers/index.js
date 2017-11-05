@@ -1,9 +1,10 @@
 import Controller from '@ember/controller';
+import Ember from 'ember';
 
 export default Controller.extend({
-    firstName: 'Ned',
+    firstName: 'Tony',
     lastName: 'Stark',
-    email: 'ned@winterfell.com',
+    email: 'tony@avengers.com',
     actions: {
       addSubscriber() {
         let person = this.get('store').createRecord('member', {
@@ -13,11 +14,6 @@ export default Controller.extend({
         });
 
         person.save();
-        // var self = this;
-        // thing.save().then(function() {
-        //   self.transitionTo('things');
-        // }).catch(function(reason) {
-        // });
       }
     }
 });
