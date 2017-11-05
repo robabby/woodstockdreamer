@@ -1,8 +1,6 @@
 /* eslint-env node */
 'use strict';
 
-// const keys = require('./keys');
-
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'woodstockdreamer',
@@ -10,7 +8,6 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     wordpressHost: 'https://woodstockdreamer.com/wp',
-    // keys,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build

@@ -4,13 +4,10 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 var request = require('superagent');
+const keys = require('./config/keys');
 var app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-
-const mailchimpInstance = 'us17';
-const listUniqueId = '91cf58cb85';
-const mailchimpApiKey = 'e4896dfd05ec4f70825e2f1395d7b67a-us17';
 
 app.get('/', function (req, res) {
   res.send('Hello World!');
@@ -18,9 +15,9 @@ app.get('/', function (req, res) {
 
 app.post('/members', function (req, res) {
     request
-        .post('https://' + mailchimpInstance + '.api.mailchimp.com/3.0/lists/' + listUniqueId + '/members/')
+        .post(`https://${keys.mailchimpInstance}.api.mailchimp.com/3.0/lists/${keys.listUniqueId}/members/`)
         .set('Content-Type', 'application/json;charset=utf-8')
-        .set('Authorization', 'Basic ' + new Buffer('any:' + mailchimpApiKey ).toString('base64'))
+        .set('Authorization', 'Basic ' + new Buffer('any:' + keys.mailchimpApiKey ).toString('base64'))
         .send({
           'email_address': req.body.email,
           'status': 'subscribed',
