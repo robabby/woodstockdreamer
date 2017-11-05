@@ -5,5 +5,12 @@
   <br />
   {{#paper-button raised=true primary=true onClick=(action "addSubscriber")}}Submit{{/paper-button}}
 </div>
+<div>
+  {{#if showMessage}}
+    {{#paper-toast as |toast|}}
+      {{#toast.text}}Thanks!{{/toast.text}}
+    {{/paper-toast}}
+  {{/if}}
+</div>
 
 {{outlet}}
