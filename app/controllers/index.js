@@ -19,7 +19,7 @@ export default Controller.extend({
           self.set('showMessage', true)
         }).catch((err) => {
           Ember.Logger.info(err);
-        });;
+        });
       }
     }
 });
