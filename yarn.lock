@@ -1011,7 +1011,7 @@ bluebird@^3.1.1, bluebird@^3.4.6:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.5.1.tgz#d9551f9de98f1fcda1e683d17ee91a0602ee2eb9"
 
-body-parser@1.18.2, body-parser@^1.17.0:
+body-parser@1.18.2:
   version "1.18.2"
   resolved "https://registry.yarnpkg.com/body-parser/-/body-parser-1.18.2.tgz#87678a19d84b47d859b83199bd59bce222b10454"
   dependencies:
@@ -2168,13 +2168,6 @@ ember-cli-broccoli-sane-watcher@^2.0.4:
     heimdalljs-logger "^0.1.7"
     rsvp "^3.0.18"
     sane "^1.1.1"
-
-ember-cli-content-security-policy@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/ember-cli-content-security-policy/-/ember-cli-content-security-policy-1.0.0.tgz#4f7d72997d4209cd59f10d3b0070fdb39593ed2d"
-  dependencies:
-    body-parser "^1.17.0"
-    chalk "^2.0.0"
 
 ember-cli-dependency-checker@^2.0.0:
   version "2.0.1"
