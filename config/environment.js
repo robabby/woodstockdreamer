@@ -9,7 +9,7 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
-    wordpressHost: 'http://woodstockdreamer.com/wp',
+    wordpressHost: 'https://woodstockdreamer.com/wp',
     // keys,
     EmberENV: {
       FEATURES: {
