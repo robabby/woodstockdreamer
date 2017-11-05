@@ -1,10 +1,10 @@
 import config from "woodstockdreamer/config/environment";
 
 export default function() {
-  const mailchimp = config.herokuHost;
+  const api = config.herokuHost;
   const wordpress = config.wordpressHost;
 
-  this.passthrough(`${mailchimp}/**`);
+  this.passthrough(`${api}/**`);
   this.passthrough(`${wordpress}/**`);
 
   /*

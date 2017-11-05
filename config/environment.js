@@ -31,7 +31,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
-    ENV.herokuHost = "https://localhost:3000";
+    ENV.herokuHost = 'https://woodstockdreamer-api.herokuapp.com';
   }
 
   if (environment === 'test') {
@@ -47,7 +47,7 @@ module.exports = function(environment) {
 
   if (environment === 'production') {
     // here you can enable a production-specific feature
-    ENV.herokuHost = 'https://mighty-everglades-18421.herokuapp.com'
+    ENV.herokuHost = 'https://woodstockdreamer-api.herokuapp.com';
   }
 
   return ENV;
