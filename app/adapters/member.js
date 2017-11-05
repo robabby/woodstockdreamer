@@ -1,7 +1,6 @@
 import DS from 'ember-data';
-
-const PORT = process.env.PORT || 3000;
+import config from './config/environment';
 
 export default DS.RESTAdapter.extend({
-  host: `https://localhost:${PORT}`
+  host: `https://localhost:${config.PORT}`
 });

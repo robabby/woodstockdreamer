@@ -1,7 +1,7 @@
 import config from "woodstockdreamer/config/environment";
 
 export default function() {
-  const mailchimp = config.APP.MAILCHIMP_API;
+  const mailchimp = `http://localhost:${config.PORT}`;
   const wordpress = config.wordpressHost;
 
   this.passthrough(`${mailchimp}/**`);
