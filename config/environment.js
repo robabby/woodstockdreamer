@@ -8,7 +8,8 @@ module.exports = function(environment) {
     rootURL: '/',
     locationType: 'auto',
     PORT: process.env.PORT || 3000,
-    wordpressHost: 'https://woodstockdreamer.com/wp',
+    wordpressHost: 'http://woodstockdreamer.com/wp',
+    herokuHost: 'https://arcane-temple-17371.herokuapp.com/',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
