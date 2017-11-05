@@ -1,9 +1,9 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-    firstName: '',
-    lastName: '',
-    email: '',
+    firstName: 'Ned',
+    lastName: 'Stark',
+    email: 'ned@winterfell.com',
     actions: {
       addSubscriber() {
         let person = this.get('store').createRecord('member', {

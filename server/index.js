@@ -14,6 +14,7 @@ app.get('/', function (req, res) {
 });
 
 app.post('/members', function (req, res) {
+  console.log(`https://${keys.mailchimpInstance}.api.mailchimp.com/3.0/lists/${keys.listUniqueId}/members/`);
     request
         .post(`https://${keys.mailchimpInstance}.api.mailchimp.com/3.0/lists/${keys.listUniqueId}/members/`)
         .set('Content-Type', 'application/json;charset=utf-8')
@@ -35,6 +36,5 @@ app.post('/members', function (req, res) {
           });
 });
 
-app.listen(3000, function () {
-  console.log('Example app listening on port 3000!');
-});
+const PORT = process.env.PORT || 3000;
+app.listen(PORT);
