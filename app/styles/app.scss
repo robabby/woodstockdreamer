@@ -1,3 +1,12 @@
+@import 'normalize';
 @import 'ember-paper';
 
 .hidden { display: none; }
+
+.stage {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  background: url('images/stage-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
