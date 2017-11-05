@@ -1,7 +1,7 @@
 import config from "woodstockdreamer/config/environment";
 
 export default function() {
-  const mailchimp = `${config.herokuHost}:${config.PORT}`;
+  const mailchimp = config.herokuHost};
   const wordpress = config.wordpressHost;
 
   this.passthrough(`${mailchimp}/**`);
