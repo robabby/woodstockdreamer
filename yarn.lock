@@ -2385,6 +2385,12 @@ ember-cli-uglify@^2.0.0:
     broccoli-uglify-sourcemap "^2.0.0"
     lodash.defaultsdeep "^4.6.0"
 
+ember-cli-uuid@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/ember-cli-uuid/-/ember-cli-uuid-0.4.4.tgz#080b3dcccfcafd7c3e8171a6092ae8148fa1a0d5"
+  dependencies:
+    ember-cli-babel "^6.6.0"
+
 ember-cli-valid-component-name@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ember-cli-valid-component-name/-/ember-cli-valid-component-name-1.0.0.tgz#71550ce387e0233065f30b30b1510aa2dfbe87ef"
@@ -4924,6 +4930,10 @@ node-sass@^4.1.0:
     request "^2.79.0"
     sass-graph "^2.2.4"
     stdout-stream "^1.4.0"
+
+node-uuid@1.4.6:
+  version "1.4.6"
+  resolved "https://registry.yarnpkg.com/node-uuid/-/node-uuid-1.4.6.tgz#6a9632f46352243c84d2f45534d614c0bdcbeaf2"
 
 "nopt@2 || 3", nopt@^3.0.6:
   version "3.0.6"
