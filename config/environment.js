@@ -1,3 +1,5 @@
+const keys = require('./keys');
+
 /* eslint-env node */
 'use strict';
 
@@ -7,7 +9,8 @@ module.exports = function(environment) {
     environment,
     rootURL: '/',
     locationType: 'auto',
-    wordpressHost: 'http://woodstockdreamer.com/wp/',
+    wordpressHost: 'http://woodstockdreamer.com/wp',
+    keys,
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -22,6 +25,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+      MAILCHIMP_API: 'https://us17.api.mailchimp.com/3.0'
     }
   };
 

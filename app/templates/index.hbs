@@ -1,0 +1,9 @@
+<div>
+  {{paper-input class="flex-30" label="First Name" value=firstName onChange=(action (mut firstName))}}
+  {{paper-input class="flex-30" label="Last Name" value=lastName onChange=(action (mut lastName))}}
+  {{paper-input class="flex-30" label="Email" value=email onChange=(action (mut email))}}
+  <br />
+  {{#paper-button raised=true primary=true onClick=(action "addSubscriber")}}Submit{{/paper-button}}
+</div>
+
+{{outlet}}
