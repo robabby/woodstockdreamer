@@ -1,6 +1,8 @@
 /* eslint-env node */
 'use strict';
 
+const PORT = process.env.PORT || 3000;
+
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'woodstockdreamer',
@@ -22,7 +24,7 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-      MAILCHIMP_API: 'http://localhost:3000'
+      MAILCHIMP_API: `http://localhost:${PORT}`
     }
   };
 
