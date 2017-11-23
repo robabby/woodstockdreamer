@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:carbon
 
 # set working directory
 RUN mkdir /usr/src/app
