@@ -11,7 +11,7 @@
   },
   "repository": "",
   "scripts": {
-    "build": "ember build",
+    "build": "ember build --environment=production --output-path=../public/",
     "start": "ember server",
     "test": "ember test"
   },
