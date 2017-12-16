@@ -30,10 +30,9 @@ class Main extends React.Component {
           className={`${this.props.article === 'blog' ? 'active' : ''}
           ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Blog</h2>
-          {/* <span className="image main"><img src={pic01} alt="" /></span> */}
-          <h3>The Wound Makes the Healer</h3>
-          <p>Nuno is a Portfolio Manager at an NYC based asset management firm, and a Certified Transformational Coach, by Coaching for transformation NYC. Nuno studies Nonviolent Communication, Karttikeyan Yogic Method, Kabbalah at the Kabbalah Center NYC, and completed the Landmark Forum Education in NYC. Most recently, Nuno has completed Dr. Joe Dispenza’s seminar series.</p>
-          <p>Driven by the depths of his mid-life crisis, Nuno began his spiritual path in 2013, which exposed him to transformational teachings which culminate in his series for Men. Using his beautiful home in Woodstock, New York, Nuno hosts workshops providing people with the opportunity to “peel away the onion”, and erase their blockages. </p>
+          <span className="image main"><img src={pic01} alt="" /></span>
+          <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
           {close}
         </article>
 
