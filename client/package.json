@@ -1,54 +1,45 @@
 {
-  "name": "woodstockdreamer",
-  "version": "0.0.0",
-  "private": true,
-  "description": "Small description for woodstockdreamer goes here",
-  "license": "MIT",
-  "author": "",
-  "directories": {
-    "doc": "doc",
-    "test": "tests"
-  },
-  "repository": "",
-  "scripts": {
-    "build": "ember build --environment=production --output-path=../public/",
-    "start": "ember server",
-    "test": "ember test"
+  "name": "gatsby-starter-dimension",
+  "description": "Gatsby Starter - Dimension by HTML5 UP",
+  "version": "1.0.0",
+  "author": "Hunter Chang",
+  "dependencies": {
+    "gatsby": "^1.9.73",
+    "gatsby-image": "^1.0.16",
+    "gatsby-link": "^1.6.22",
+    "gatsby-plugin-google-analytics": "^1.0.10",
+    "gatsby-plugin-react-helmet": "^1.0.8",
+    "gatsby-plugin-sass": "^1.0.12",
+    "gatsby-plugin-sharp": "^1.6.9",
+    "gatsby-remark-copy-linked-files": "^1.5.9",
+    "gatsby-remark-images": "^1.5.18",
+    "gatsby-source-filesystem": "^1.5.5",
+    "gatsby-transformer-remark": "^1.7.17",
+    "gatsby-transformer-sharp": "^1.6.10",
+    "lodash": "^4.15.0"
   },
   "devDependencies": {
-    "broccoli-asset-rev": "^2.4.5",
-    "ember-ajax": "^3.0.0",
-    "ember-cli": "~2.16.2",
-    "ember-cli-app-version": "^3.0.0",
-    "ember-cli-babel": "^6.6.0",
-    "ember-cli-dependency-checker": "^2.0.0",
-    "ember-cli-eslint": "^4.0.0",
-    "ember-cli-htmlbars": "^2.0.1",
-    "ember-cli-htmlbars-inline-precompile": "^1.0.0",
-    "ember-cli-inject-live-reload": "^1.4.1",
-    "ember-cli-mirage": "^0.4.0",
-    "ember-cli-qunit": "^4.0.0",
-    "ember-cli-sass": "^7.0.0",
-    "ember-cli-shims": "^1.1.0",
-    "ember-cli-sri": "^2.1.0",
-    "ember-cli-uglify": "^2.0.0",
-    "ember-cli-uuid": "^0.4.4",
-    "ember-data": "~2.16.2",
-    "ember-export-application-global": "^2.0.0",
-    "ember-load-initializers": "^1.0.0",
-    "ember-normalize": "^1.0.0",
-    "ember-resolver": "^4.0.0",
-    "ember-screen": "^0.2.0",
-    "ember-source": "~2.16.0",
-    "ember-wordpress": "^0.1.5",
-    "loader.js": "^4.2.3",
-    "node-uuid": "1.4.6",
-    "normalize.css": "~4.1.1"
+    "gh-pages": "^0.12.0",
+    "prettier": "^1.7.4"
   },
-  "engines": {
-    "node": "^4.5 || 6.* || >= 7.*"
+  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "keywords": [
+    "gatsby"
+  ],
+  "license": "MIT",
+  "main": "n/a",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
   },
-  "dependencies": {
-    "ember-paper": "^1.0.0-beta.3"
+  "scripts": {
+    "dev": "gatsby develop",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js'",
+    "develop": "gatsby develop",
+    "build": "gatsby build",
+    "deploy": "gatsby build --prefix-paths && gh-pages -d public",
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js"
   }
 }
