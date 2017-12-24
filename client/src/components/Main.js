@@ -17,7 +17,7 @@ class Main extends React.Component {
           id="intro"
           className={`${this.props.article === 'intro' ? 'active' : ''}
           ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
-          <h2 className="major">Intro</h2>
+          <h2 className="major">Hi Joe</h2>
           {/* <span className="image main"><img src={pic01} alt="" /></span> */}
           <h3>The Wound Makes the Healer</h3>
           <p>Nuno is a Portfolio Manager at an NYC based asset management firm, and a Certified Transformational Coach, by Coaching for transformation NYC. Nuno studies Nonviolent Communication, Karttikeyan Yogic Method, Kabbalah at the Kabbalah Center NYC, and completed the Landmark Forum Education in NYC. Most recently, Nuno has completed Dr. Joe Dispenza’s seminar series.</p>
