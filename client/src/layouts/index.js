@@ -21,6 +21,7 @@ class Template extends React.Component {
   }
 
   componentDidMount () {
+    console.log(this.state.article);
     this.timeoutId = setTimeout(() => {
         this.setState({loading: ''});
     }, 100);
@@ -77,12 +78,14 @@ class Template extends React.Component {
   render() {
     const siteTitle = this.props.data.site.siteMetadata.title
     const siteDescription = this.props.data.site.siteMetadata.description
+    const articles = this.props.data.allStrapiArticle.edges
+    console.log("/articles/", articles);
 
     return (
       <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'is-article-visible' : ''}`}>
         <Helmet>
-            <title>{siteTitle}</title>
-            <meta name="description" content={siteDescription} />
+          <title>{siteTitle}</title>
+          <meta name="description" content={siteDescription} />
         </Helmet>
 
         <div id="wrapper">
@@ -111,11 +114,20 @@ Template.propTypes = {
 export default Template
 
 export const pageQuery = graphql`
-  query PageQuery {
+  query PageAndArticleQuery {
     site {
       siteMetadata {
         title
         description
+      }
+    }
+    allStrapiArticle {
+      edges {
+        node {
+          id
+          title
+          content
+        }
       }
     }
   }
