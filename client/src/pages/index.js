@@ -85,18 +85,23 @@ class Index extends React.Component {
     return (
       <div className={`body ${this.state.loading} ${this.state.isArticleVisible ? 'is-article-visible' : ''}`}>
 
-        <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
-        <Main
-          isArticleVisible={this.state.isArticleVisible}
-          timeout={this.state.timeout}
-          articleTimeout={this.state.articleTimeout}
-          article={this.state.article}
-          articles={articles}
-          onCloseArticle={this.handleCloseArticle}
-        />
-        <Footer timeout={this.state.timeout} />
+        <div id="wrapper">
+
+          <Header onOpenArticle={this.handleOpenArticle} timeout={this.state.timeout} />
+          <Main
+            isArticleVisible={this.state.isArticleVisible}
+            timeout={this.state.timeout}
+            articleTimeout={this.state.articleTimeout}
+            article={this.state.article}
+            articles={articles}
+            onCloseArticle={this.handleCloseArticle}
+          />
+          <Footer timeout={this.state.timeout} />
+
+        </div>
 
         <div id="bg"></div>
+
       </div>
     )
   }
@@ -109,11 +114,20 @@ Index.propTypes = {
 export default Index
 
 export const pageQuery = graphql`
-  query PageQuery {
+  query PageAndArticleQuery {
     site {
       siteMetadata {
         title
         description
+      }
+    }
+    allStrapiArticle {
+      edges {
+        node {
+          id
+          title
+          content
+        }
       }
     }
   }

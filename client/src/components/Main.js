@@ -7,7 +7,8 @@ import pic03 from '../images/pic03.jpg'
 
 class Main extends React.Component {
   render() {
-
+    console.log("Main.js | this.props", this.props);
+    const { articles } = this.props;
     let close = <div className="close" onClick={() => {this.props.onCloseArticle()}}></div>
 
     return (
@@ -31,8 +32,18 @@ class Main extends React.Component {
           ${this.props.articleTimeout ? 'timeout' : ''}`} style={{display:'none'}}>
           <h2 className="major">Blog</h2>
           <span className="image main"><img src={pic01} alt="" /></span>
-          <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+          {/* <p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
+          <p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p> */}
+
+          {articles.map(document => (
+            <div key={document.node.id}>
+              <h2>
+                <Link to={`/${document.node.id}`}>{document.node.title}</Link>
+              </h2>
+              {/* <p>{document.node.content}</p> */}
+            </div>
+          ))}
+
           {close}
         </article>
 
