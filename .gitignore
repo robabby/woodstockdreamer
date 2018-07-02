@@ -13,3 +13,4 @@ public/**
 .env
 npm-debug.log
 _ignore
+ecosystem.json
