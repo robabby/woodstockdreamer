@@ -1,3 +1,4 @@
+const apiUrl = process.env.WSD_API_PORT || "1337";
 module.exports = {
   siteMetadata: {
     title: "Woodstock Dreamer",
@@ -9,7 +10,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `http://localhost:1337`,
+        apiURL: apiUrl,
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           `article`
         ]
