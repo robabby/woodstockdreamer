@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 
-console.log(`### /apiUrl/ is ${apiURL}:${apiPort} ###`);
+console.log(`### /apiUrl/ is ${apiUrl}:${apiPort} ###`);
 
 module.exports = {
   siteMetadata: {
@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: `${apiURL}:${apiPort}`,
+        apiURL: `${apiUrl}:${apiPort}`,
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           `article`
         ]
