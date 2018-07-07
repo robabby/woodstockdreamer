@@ -1,10 +1,12 @@
 let apiUrl;
-const apiPort = process.env.WSD_API_PORT || "1337";
+const apiPort;
 
 if (process.env.NODE_ENV === 'production') {
   apiUrl = 'http://api.woodstockdreamer.com';
+  apiPort = "6001";
 } else {
   apiUrl = 'http://localhost';
+  apiPort = "1337";
 }
 
 
