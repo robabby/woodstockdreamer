@@ -4,10 +4,6 @@ const path = require("path")
 const select = require(`unist-util-select`)
 const fs = require(`fs-extra`)
 
-const apiUrl = process.env.WSD_API_PORT || "1337";
-
-console.log(`### /apiUrl/ is ${process.env.WSD_API_PORT} ###`);
-
 const makeRequest = (graphql, request) => new Promise((resolve, reject) => {
   // Query for nodes to use in creating pages.
   resolve(
