@@ -1,7 +1,3 @@
-const apiUrl = process.env.WSD_API_PORT || "1337";
-
-console.log(`### /apiUrl/ is ${process.env.WSD_API_PORT} ###`);
-
 module.exports = {
   siteMetadata: {
     title: "Woodstock Dreamer",
