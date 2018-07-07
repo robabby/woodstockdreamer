@@ -7,7 +7,7 @@
     "start": "node server.js",
     "server:dev": "nodemon server.js",
     "server:prod": "pm2 start ecosystem.json --env production",
-    "client:serve": "npm run start --prefix client",
+    "client:serve": "npm run dev --prefix client",
     "client:build": "npm run build --prefix client",
     "dev": "concurrently \"npm run server:dev\" \"npm run client:serve\"",
     "prod": "concurrently \"npm run server:prod\" \"npm run client:build\"",
