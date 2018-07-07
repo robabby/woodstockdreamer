@@ -1,5 +1,5 @@
 let apiUrl;
-const apiPort;
+let apiPort;
 
 if (process.env.NODE_ENV === 'production') {
   apiUrl = 'http://api.woodstockdreamer.com';
