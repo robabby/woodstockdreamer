@@ -1,6 +1,14 @@
-const apiUrl = process.env.WSD_API_PORT || "1337";
+let apiUrl;
+const apiPort = process.env.WSD_API_PORT || "1337";
 
-console.log(`### /apiUrl/ is ${process.env.WSD_API_PORT} ###`);
+if (process.env.NODE_ENV === 'production') {
+  apiUrl = 'http://api.woodstockdreamer.com';
+} else {
+  apiUrl = 'http://localhost';
+}
+
+
+console.log(`### /apiUrl/ is ${apiURL}:${apiPort} ###`);
 
 module.exports = {
   siteMetadata: {
@@ -13,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: apiUrl,
+        apiURL: `${apiURL}:${apiPort}`,
         contentTypes: [ // List of the Content Types you want to be able to request from Gatsby.
           `article`
         ]
